@@ -1,0 +1,60 @@
+body{
+    background-color: whitesmoke;
+}
+
+.nav-wrapper{
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp); 
+    text-shadow: 2px 2px 3px #2979ff;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-image: url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp); 
+    text-shadow: 2px 2px 3px #2979ff;
+}
+
+img#div {
+  width: 20px;
+   height: 20px;
+}
+
+/* label color */
+.input-field label {
+    color: #000;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #bbdefb;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #bbdefb;
+    box-shadow: 0 1px 0 0 #bbdefb;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #bbdefb;
+    box-shadow: 0 1px 0 0 #bbdefb;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    /* color: rgb(6, 240, 38); */
+    background-image: url('https://media0.giphy.com/media/dUNcKghcYXJp5Km8LY/giphy-downsized-large.gif');
+  display: block;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+  }
