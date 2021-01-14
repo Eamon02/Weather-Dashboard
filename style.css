@@ -26,7 +26,7 @@ img#div {
 
 /* label color */
 .input-field label {
-    color: #000;
+    color: #bbdefb;
   }
   /* label focus color */
   .input-field input[type=text]:focus + label {
@@ -44,13 +44,12 @@ img#div {
   }
   /* invalid color */
   .input-field input[type=text].invalid {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #bbdefb;
     box-shadow: 0 1px 0 0 #000;
   }
   /* icon prefix focus color */
   .input-field .prefix.active {
     /* color: rgb(6, 240, 38); */
-    background-image: url('https://media0.giphy.com/media/dUNcKghcYXJp5Km8LY/giphy-downsized-large.gif');
   display: block;
   background-attachment: fixed;
   background-position: center center;
@@ -58,3 +57,23 @@ img#div {
           transform: translateZ(0);
   will-change: transform;
   }
+
+  /* UV Styling */
+.lowUV{
+  padding: 5px;
+  border-radius: 20%;
+  background: rgb(43, 255, 0);
+}
+
+.mediumUV{
+  padding: 5px;
+  border-radius: 20%;
+  background: rgb(251, 255, 0);
+}
+
+
+.highUV{
+  padding: 5px;
+  border-radius: 20%;
+  background: red;
+}
