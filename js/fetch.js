@@ -59,7 +59,7 @@ const requestCity = async (city) => {
 }
 
 //need to grab value from imput to pass into requestCity function 
-$("#SearchBar").on("change", s =>{
+$("#searchBtn").on("click", s =>{
     s.preventDefault();
     var Searched = $("#SearchBar").val();
     requestCity(Searched);

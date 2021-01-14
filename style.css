@@ -19,6 +19,39 @@ footer{
     text-shadow: 2px 2px 3px #2979ff;
 }
 
+.row{
+  margin-bottom: 0px;
+}
+
+#searchRow{
+  margin: 0px;
+
+}
+
+#Searchbar{
+  margin-bottom: 0px !important;
+}
+
+.input-field{
+  padding-bottom: 0px;
+  margin-bottom: 0px !important;
+}
+
+#searchBtn{
+  background-color:  #bbdefb;
+  margin: 14px;
+}
+
+#srch{
+
+}
+
+#historyRow{
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
 img#div {
   width: 20px;
    height: 20px;
@@ -76,4 +109,15 @@ img#div {
   padding: 5px;
   border-radius: 20%;
   background: red;
+}
+
+/* main card styling */
+#mainCard{
+  border-radius: 10px;
+}
+
+/* Card Styling */
+
+#forecastCard{
+  border-radius: 10px;
 }
