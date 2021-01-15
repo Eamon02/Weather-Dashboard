@@ -6,7 +6,8 @@ const requestCity = async (city) => {
     const query = `?q=${city}&appid=${APIKey}`;
 
     $.get(baseURL + query, function (data, status) {
-        // console.log(data);
+        console.log(data);
+        console.log(data.list[0].weather[0].description)
 
         //Info to be grabbed from API
         var cityName = data.city.name;
@@ -14,15 +15,19 @@ const requestCity = async (city) => {
         var humidity = data.list[0].main.humidity
         var windSpeed = data.list[0].wind.speed.toFixed(1)
         var date = data.list[0].dt_txt 
-        // var uvIndex = data.list[0].
+        var wDescription = data.list[0].weather[0].description
+        var icon = data.list[0].weather[0].icon
 
         // console.log(humidity, windSpeed, date)
 
         //Init changes function
-        change(cityName, temp, humidity, windSpeed, date)
+        change(cityName, temp, humidity, windSpeed, date, icon)
 
         //Init History Array Function
         history(cityName)
+
+        //Changes background based on weather
+        backgroundWeather(wDescription)
 
         //UV FETCH
         let UVAPI = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&exclude={part}&appid=${APIKey}`;
@@ -53,6 +58,8 @@ const requestCity = async (city) => {
                 $(`.humidity${i}`).html(`Humidity: ${UVData.daily[i].humidity}%`);
 
                 $(`.temp${i}`).html(`${((UVData.daily[i].temp.min- 273.15)*1.8+ 32).toFixed(0)}-${((UVData.daily[i].temp.max- 273.15)*1.8+ 32).toFixed(0)} °F`);
+                $(`.icon${i}`).attr("src", `http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png`)
+                $(`.wD${i}`).html(`${data.list[i].weather[0].description}`)
             })
         })
     });
@@ -71,6 +78,12 @@ function change(cityName, temp, humidity, windSpeed, date){
     $("#temp").html(`Temperature: ${temp} °F`);
     $("#humidity").html(`Humidity: ${humidity}%`)
     $("#windSpd").html(`Wind Speed: ${windSpeed} MPH`)
+}
+
+// Background change based on weather description
+function backgroundWeather(wDescription){
+    $("body").removeClass()
+    $("body").toggleClass(wDescription)
 }
 
 var historyArray = []
@@ -97,14 +110,28 @@ function history(cityName){
                 
             }
 
-
 }
 
 //Fill History
 fillHistory()
 function fillHistory(){
     // set alert if array empty
+    let loadArray = localStorage.getItem("History", historyArray)
+    historyArray = JSON.parse(loadArray)
+    if(historyArray === null){
+        requestCity("Greenwich")
+        historyArray = ["Greenwich"]
+        //or launch error
+    }else{
 
+    for (i = 0; i < 4; i++){
+        $(`#history${i+1}`).html(historyArray[i])
+        }
+        //Fills in based on previous search
+        requestCity(historyArray[0]);
+    }
 }
 
 //click feature -add event listnered this.text() -> pass into Requestcity funct
+
+

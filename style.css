@@ -1,5 +1,5 @@
 body{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
 }
 
 .nav-wrapper{
@@ -120,4 +120,25 @@ img#div {
 
 #forecastCard{
   border-radius: 10px;
+}
+
+/* Background weather classes */
+.clouds{
+  background-image: url(https://media0.giphy.com/media/K7o9FdCoDnwEo/giphy.gif?cid=ecf05e47ik83s276hfgih7h6zzjv6w3nl0bdey33le0tlwro&rid=giphy.gif);
+}
+
+.rain{
+  background-image: url(https://media0.giphy.com/media/sclaXPuYMBQVN4OsuM/giphy.webp?cid=ecf05e47hl2lg7x2xjmdygd4rmbbfttc8zautut5ky5sds4r&rid=giphy.webp);
+}
+
+.clear{
+  background-image: url(https://media3.giphy.com/media/MasFnHEAdMTF7kqHbl/200w.webp?cid=ecf05e47u678wovcskmav91lb8x6ko9gcrmqp5u00wmjjdot&rid=200w.webp);
+  background-repeat: repeat; 
+  background-size: contain;
+  background-position-x: left;
+  -webkit-text-fill-color: transparent; 
+  appearance: none;
+  border: none;
+  display: block;
+  overflow: hidden;
 }
