@@ -6,7 +6,7 @@ const requestCity = async (city) => {
     const query = `?q=${city}&appid=${APIKey}`;
 
     $.get(baseURL + query, function (data, status) {
-        console.log(data);
+        // console.log(data);
 
         //Info to be grabbed from API
         var cityName = data.city.name;
@@ -32,7 +32,7 @@ const requestCity = async (city) => {
             url: UVAPI,
             method: "GET"
         }).then(function(UVData){
-            console.log(UVData)
+            // console.log(UVData)
             $("#UV").html(`${UVData.current.uvi}`)
             if(UVData.current.uvi < 4){
                 $("#UV").addClass("lowUV")
@@ -46,7 +46,7 @@ const requestCity = async (city) => {
             let forecastArray = [1,2,3,4,5]
             forecastArray.forEach(function(i){
                 let forecastDate = (new Date(UVData.daily[i].dt * 1000));
-                console.log(forecastDate.toDateString().slice(0,3));
+                // console.log(forecastDate.toDateString().slice(0,3));
 
                 $(`#date${i}`).html(`${(new Date(UVData.daily[i].dt * 1000)).toDateString().slice(0,3)}`);
 
@@ -73,8 +73,38 @@ function change(cityName, temp, humidity, windSpeed, date){
     $("#windSpd").html(`Wind Speed: ${windSpeed} MPH`)
 }
 
+var historyArray = []
 //History function 
 function history(cityName){
-    //create and array and append city to array and loop through, set limit to 5, each new instance set to start of array, for each create a button 
-    // console.log(cityName)
+    for (i = 0; i < 4; i++){
+        if(historyArray[i] === cityName){
+            return
+        }
+    }
+    
+        if (historyArray.length < 4){
+            historyArray.unshift(cityName)
+        
+        }else{
+            historyArray.pop()
+            historyArray.unshift(cityName)
+        }
+        console.log(historyArray)
+        localStorage.setItem("History", JSON.stringify(historyArray))
+
+        for (i = 0; i < 4; i++){
+            $(`#history${i+1}`).html(historyArray[i])
+                
+            }
+
+
 }
+
+//Fill History
+fillHistory()
+function fillHistory(){
+    // set alert if array empty
+
+}
+
+//click feature -add event listnered this.text() -> pass into Requestcity funct
