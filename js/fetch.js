@@ -133,5 +133,9 @@ function fillHistory(){
 }
 
 //click feature -add event listnered this.text() -> pass into Requestcity funct
-
+$(".srch").on("click",historyExecute)
+function historyExecute(){
+    console.log($(this).text())
+    requestCity($(this).text())
+}
 

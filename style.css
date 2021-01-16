@@ -10,7 +10,7 @@ body{
 }
 
 footer{
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -120,6 +120,11 @@ img#div {
 
 #forecastCard{
   border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+#forecastCard h3{
+  font-size: large;
 }
 
 /* Background weather classes */
@@ -136,9 +141,4 @@ img#div {
   background-repeat: repeat; 
   background-size: contain;
   background-position-x: left;
-  -webkit-text-fill-color: transparent; 
-  appearance: none;
-  border: none;
-  display: block;
-  overflow: hidden;
 }
