@@ -137,5 +137,6 @@ $(".srch").on("click",historyExecute)
 function historyExecute(){
     console.log($(this).text())
     requestCity($(this).text())
+    
 }
 
