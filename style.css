@@ -19,11 +19,24 @@ footer{
     text-shadow: 2px 2px 3px #2979ff;
 }
 
+.card{
+  /* background-image: linear-gradient(180deg, rgba(13, 33, 130,1) -2.5876288659793687%,rgba(56, 203, 229,1) 84%,rgba(57, 204, 230,1) 84%); */
+  opacity: 95%;
+}
+
 .row{
   margin-bottom: 0px;
 }
 
+.srch{
+  text-align: center;
+}
+
+.srchHistory{
+}
+
 #searchRow{
+  padding: 5px;
   margin: 0px;
 
 }
@@ -42,14 +55,22 @@ footer{
   margin: 14px;
 }
 
-#srch{
-
+#searchBtn:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
-#historyRow{
+.srch:hover{
+ color: blue;
+ text-emphasis: 10px;
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+ transform: scale(1.25);
+}
+
+#historyCard{
   text-align: center;
-  border-radius: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 7px;
 }
 
 img#div {
@@ -113,6 +134,7 @@ img#div {
 
 /* main card styling */
 #mainCard{
+  margin-top: 20px;
   border-radius: 10px;
 }
 
@@ -120,12 +142,46 @@ img#div {
 
 #forecastCard{
   border-radius: 10px;
-  margin-bottom: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+#forecastCard .card-content{
+  padding: 0px !important;
+  border-radius: 1%;
 }
 
 #forecastCard h3{
-  font-size: large;
+  font-size: 5vw;
+  text-emphasis: 20px;
 }
+
+.tabs .tab a{
+  color:blue;
+  background-image:url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp);
+  text-shadow: 2px 2px 3px #2979ff;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:rgb(238, 238, 238);
+  color:#000;
+  
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  /* background-image:url(https://media1.giphy.com/media/JayoKoUZcnGwM/200w.webp?cid=ecf05e474f457ef756f6d60daf9645dc94029694402ef5b6&rid=200w.webp); */
+  /* background-repeat: repeat; 
+  background-size: contain;
+  background-position-x: left; */
+  transform: scale(1.5);
+  color:;
+  text-shadow: 2px 2px 3px #2979ff;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#000;
+} /*Color of underline*/
 
 /* Background weather classes */
 .clouds{

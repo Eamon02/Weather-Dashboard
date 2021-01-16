@@ -28,108 +28,118 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper indigo accent-4">
-                <a href="#" class="brand-logo"><i class="fas fa-cloud-moon align-left hide-on-med-and-down"></i>Weather Dashboard</a>
+                <a href="#" class="brand-logo"><i class="fas fa-cloud-moon align-left hide-on-med-and-down"></i>Weather
+                    Dashboard</a>
 
                 <!-- side nav trigger -->
-        <a href="#" class="sidenav-trigger" data-target="slide-out"><i class="fas fa-cloud-moon align-right"
-            id="spaceship"></i></a>
+                <a href="#" class="sidenav-trigger" data-target="slide-out"><i class="fas fa-cloud-moon align-right"
+                        id="spaceship"></i></a>
             </div>
         </nav>
     </div>
 
     <!-- Search Bar -->
-            <div class="row" id="searchRow">
-                <div class="input-field col s8 offset-s1">
-                    <input id="SearchBar" type="text" class="validate">
-                    <label for="SearchBar">Location</label>
-                </div>
-                    <a class="btn-floating btn-medium waves-effect waves-light" id="searchBtn"><i class="material-icons">public</i></a>
-            </div>
-
-    <!-- History -->
-    <div class="row">
-            <div class="col s10 offset-s1 card light-blue lighten-5" id="historyRow">
-              
-                    <div class="col s3 srch" id="history1">Chicago</div>
-                    <div class="col s3 srch" id="history2">London</div>
-                    <div class="col s3 srch" id="history3">Denver</div>
-                    <div class="col s3 srch" id="history4">Sydney</div>
-            </div>
+    <div class="row" id="searchRow">
+        <div class="input-field col s8 offset-s1">
+            <input id="SearchBar" type="text" class="validate">
+            <label for="SearchBar">Location</label>
         </div>
-    <div class="row">
-        <!-- Main info -->
-        <div class="col col s10 offset-s1 card" id="mainCard">
-                <div class="row">
-                    <div class="card-content">
-                        <span class="card-title" id="LocalDate">LD</span>
-                        <p id="temp">Temperature:</p>
-                        <p id="humidity">Humidity:</p>
-                        <p id="windSpd">Wind Speed:</p>
-                        <p>UV Index: <span id="UV"></span></p>
-                    </div>
-                </div>
-        </div>
-                           <!-- Forecast  -->
+        <a class="btn-floating btn-medium waves-effect waves-light" id="searchBtn"><i
+                class="material-icons">public</i></a>
     </div>
 
-            <div class="row">
-                <div class="card col s10 offset-s1 medium" id="forecastCard">
-                    <div class="card-content">
-                        <h3>5-Day Forecast:</h3>
-                    </div>
-                    <div class="card-tabs">
-                      <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class="active" href="#test4" id="date1">Date</a></li>
-                        <li class="tab"><a href="#test5" id="date2">Date</a></li>
-                        <li class="tab"><a href="#test6" id="date3">Date</a></li>
-                        <li class="tab"><a href="#test7" id="date4">Date</a></li>
-                        <li class="tab"><a href="#test8" id="date5">Date</a></li>
-                      </ul>
-                    </div>
-                    <div class="card-content grey lighten-4">
-                      <div id="test4">
-                        <img class="icon1"></img>
-                        <p class="wD1">w</p>
-                          <p class="humidity1">Humidity</p>
-                          <p class="temp1">temp</p>
-
-                      </div>
-                      <div id="test5">
-                        <img class="icon2"></img>
-                        <p class="wD2">w</p>
-                        <p class="humidity2">Humidity</p>
-                        <p class="temp2">temp</p>
-                      </div>
-                      <div id="test6">
-                        <img class="icon3"></img>
-                        <p class="wD3">w</p>
-                        <p class="humidity3">Humidity</p>
-                        <p class="temp3">temp</p>
-                    </div>
-                      <div id="test7">
-                          <img class="icon4"></img>
-                          <p class="wD4">w</p>
-                        <p class="humidity4">Humidity</p>
-                        <p class="temp4">temp</p>
-                    </div>
-                      <div id="test8">
-                        <img class="icon5"></img>
-                        <p class="wD5">w</p>
-                        <p class="humidity5">Humidity8</p>
-                        <p class="temp5">temp</p>
-                    </div>
-                    </div>
+    <!-- History -->
+    <div class="row" id="history">
+        <div class="col s12 offset-m1 m10">
+            <nav>
+                <div class="nav-wrapper">
+                  <div class="col s12 srchHistory">
+                    <div class="col s3 srch" id="history1">Chicago</div>
+                    <div class="col s3 srch" id="history2">London</div>
+            <div class="col s3 srch" id="history3">Denver</div>
+            <div class="col s3 srch" id="history4">Sydney</div>
                   </div>
-            </div>
+                </div>
+              </nav>
+        </div>
+    </div>
 
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Eamon McHugh
-                    <a class="grey-text text-lighten-4 right" href="https://venmo.com/Eamon-"><img src="https://media3.giphy.com/media/l17M5uvfc1VosGUUP0/giphy.gif?cid=ecf05e4717jfry0qbzgn3gnfdqitaa3msa7eony1d5ubk0ci&rid=giphy.gif" alt="secret" id="div"></a>
+    <!-- Main info -->
+    <div class="row">
+        <div class="col s10 offset-s1 card" id="mainCard">
+            <div class="row">
+                <div class="card-content">
+                    <span class="card-title" id="LocalDate">LD</span>
+                    <p id="temp">Temperature:</p>
+                    <p id="humidity">Humidity:</p>
+                    <p id="windSpd">Wind Speed:</p>
+                    <p>UV Index: <span id="UV"></span></p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+
+     <!-- Forecast  -->
+    <div class="row">
+        <div class="card col s10 offset-s1" id="forecastCard">
+            <div class="card-content">
+                <h3>5-Day Forecast:</h3>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#test4" id="date1">Date</a></li>
+                    <li class="tab"><a href="#test5" id="date2">Date</a></li>
+                    <li class="tab"><a href="#test6" id="date3">Date</a></li>
+                    <li class="tab"><a href="#test7" id="date4">Date</a></li>
+                    <li class="tab"><a href="#test8" id="date5">Date</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="test4">
+                    <img class="icon1"></img>
+                    <p class="wD1">w</p>
+                    <p class="humidity1">Humidity</p>
+                    <p class="temp1">temp</p>
+
+                </div>
+                <div id="test5">
+                    <img class="icon2"></img>
+                    <p class="wD2">w</p>
+                    <p class="humidity2">Humidity</p>
+                    <p class="temp2">temp</p>
+                </div>
+                <div id="test6">
+                    <img class="icon3"></img>
+                    <p class="wD3">w</p>
+                    <p class="humidity3">Humidity</p>
+                    <p class="temp3">temp</p>
+                </div>
+                <div id="test7">
+                    <img class="icon4"></img>
+                    <p class="wD4">w</p>
+                    <p class="humidity4">Humidity</p>
+                    <p class="temp4">temp</p>
+                </div>
+                <div id="test8">
+                    <img class="icon5"></img>
+                    <p class="wD5">w</p>
+                    <p class="humidity5">Humidity8</p>
+                    <p class="temp5">temp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Eamon McHugh
+                <a class="grey-text text-lighten-4 right" href="https://venmo.com/Eamon-"><img
+                        src="https://media3.giphy.com/media/l17M5uvfc1VosGUUP0/giphy.gif?cid=ecf05e4717jfry0qbzgn3gnfdqitaa3msa7eony1d5ubk0ci&rid=giphy.gif"
+                        alt="secret" id="div"></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
@@ -157,9 +167,9 @@
     var el = document.querySelector('.tabs');
     var instance = M.Tabs.init(el, {});
 
-        //   Input init
-    $(document).ready(function() {
-    M.updateTextFields();
+    //   Input init
+    $(document).ready(function () {
+        M.updateTextFields();
     });
 </script>
 
