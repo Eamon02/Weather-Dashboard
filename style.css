@@ -15,6 +15,7 @@ footer{
   bottom: 0;
   width: 100%;
   color: white;
+  text-emphasis: 5px;
   background-image: url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp); 
     text-shadow: 2px 2px 3px #2979ff;
 }
@@ -155,6 +156,10 @@ img#div {
 #forecastCard h3{
   font-size: 5vw;
   text-emphasis: 20px;
+}
+
+#test4, #test5, #test6, #test7, #test8{
+  background: rgba(163, 163, 163, 0.438);
 }
 
 .tabs .tab a{
