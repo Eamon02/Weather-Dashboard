@@ -1,12 +1,12 @@
 body{
-    /* background-color: whitesmoke; */
+  background-color: rgb(243, 243, 243);
 }
 
 .nav-wrapper{
-    overflow: hidden;
-    white-space: nowrap;
-    background-image: url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp); 
-    text-shadow: 2px 2px 3px #2979ff;
+  overflow: hidden;
+  white-space: nowrap;
+  background-image: url(https://media0.giphy.com/media/l3V0hSwrWKBGIM2vS/200w.webp?cid=ecf05e47jfvngyybryud0v9jp24wqi4dcz00zs1yxt40awtz&rid=200w.webp); 
+  text-shadow: 2px 2px 3px #2979ff;
 }
 
 footer{
@@ -174,8 +174,8 @@ img#div {
   /* background-repeat: repeat; 
   background-size: contain;
   background-position-x: left; */
-  transform: scale(1.5);
-  color:;
+  transform: scale(1.25);
+  color:#000;
   text-shadow: 2px 2px 3px #2979ff;
 } /*Background and text color when a tab is active*/
 
@@ -197,4 +197,8 @@ img#div {
   background-repeat: repeat; 
   background-size: contain;
   background-position-x: left;
+}
+
+.snow{
+  background-image: url(https://media3.giphy.com/media/3iCuUglCmyJSTQ1l3w/giphy.webp?cid=ecf05e47lmrtk9wwidmxtnlla39ejb2u5f4zr273hac2hr8r&rid=giphy.webp);
 }
